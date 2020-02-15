@@ -1,0 +1,88 @@
+<html>
+<head>
+  <title>register-int</title>
+ 
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>  
+  
+
+</head>
+<body   ng-app="app" ng-controller='val1'  >
+  <header >
+    <center><img src="icon.png"><h2>GUVI</h2> </center>
+  </header>
+<center><h3 style="color:black;margin-top: 100px"> Registration form </h3></center><br>
+<br<br>
+
+<div  class="container" style="border: 4px">
+  <div class="row">
+      <div class="col-md-4"></div>
+      <div class="col-md-4" style="border: 2px solid;border-radius:3%"><br<br><br>
+        	<div class="form-group">
+     <form name="registration" method="POST"  onsubmit="registerfirstvalid()"  >
+      <center><img src="user.png"></center>
+      <br>
+    <label for="name">Name:</label>
+    <input type="text" class="form-control tb" id="name" name="name"  ng-model="name" ng-pattern="/^[a-zA-Z][a-zA-Z\\s]+$/" required>
+    <span ng-show="registration.name.$dirty&&registration.name.$error.pattern">Enter proper name!!</span><br>
+
+    <label for="email">Email address:</label>
+    <input type="email" class="form-control fb" id="email"  name="email"  ng-model="email" required>
+    <span ng-show="registration.email.$dirty&&registration.email.$invalid">Enter proper Email!!</span><br>
+
+
+    <label for="pwd">Password:</label>
+    <input type="password" ng-model="password" class="form-control tb" id="password"  name="password"  ><br>
+    <label for="pwd">Re-enter Password:</label>
+    
+    
+    <div style="display:flex">   
+    <input type="password" class="form-control tb" ng-keyup="compare(confirm)" ng-model="confirm" id="confirm" name="confirm" ><br><br><br>
+    <span style = "padding-left: 10px;color: red" id="errorspan"></span>
+    <span style="color:#3AB2C5" ng-show="isconfirm || registration.confirm.$dirty" ng-class="{true:'green',false:'red'}[isconfirm]"  > 
+      Password {{isconfirm==true?'':'not'}} match </span> 
+    </div> 
+
+
+    <label for="phonenumber">Phone number:</label>
+    <input type="number" class="form-control tb" id="phonenumber" name="phonenumber" ><br>
+
+    <label for="dob">DOB:</label>
+    <input type="date" class="form-control tb" id="dob" name="dob" ><br>
+
+    <label for="age">Age:</label>
+    <input type="number" class="form-control tb" id="age" name="age"><br>
+
+    <label for="address">Address:</label>
+    <input type="text" class="form-control tb" id="address" name="address" ><br>
+
+     <button class="btn btn-primary btn-md" >submit</button><br><br>
+     <a href="login.html">Already regsitered</a>
+     <br<br><br>
+     </form>
+  </div>
+  </div>
+  </div>
+  </div>
+</div>
+
+<script> 
+  var app = angular.module('app', []); 
+  app.controller('val1', ['$scope', function ($scope) { 
+        
+      $scope.compare = function (confirm) { 
+          $scope.isconfirm = $scope.password == confirm ? 
+                  true : false; 
+      } 
+  }]); 
+</script> 
+  
+<script type="text/javascript" src="register.js"></script>
+
+<link rel="stylesheet" type="text/css" href="register.css">     
+</body>
+</html>
