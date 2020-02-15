@@ -42,7 +42,7 @@ password1 = $('#password').val();
 
     var newData = JSON.stringify(data);
   
-    jQuery.post('signup.php', {
+    jQuery.post('php/signup.php', {
         newData: newData
    });
     console.log('SAVE COMPLETE');
@@ -61,7 +61,7 @@ console.log(password1);
       $.ajax({
          
           type:'POST',
-          url:'register1.php',
+          url:'php/register1.php',
           data:dataString,
           cache:false,
           success:function(result){
