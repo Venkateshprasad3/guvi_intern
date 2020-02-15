@@ -13,7 +13,7 @@
 </head>
 <body   ng-app="app" ng-controller='val1'  >
   <header >
-    <center><img src="icon.png"><h2>GUVI</h2> </center>
+    <center><img src="images/icon.png"><h2>GUVI</h2> </center>
   </header>
 <center><h3 style="color:black;margin-top: 100px"> Registration form </h3></center><br>
 <br<br>
@@ -24,7 +24,7 @@
       <div class="col-md-4" style="border: 2px solid;border-radius:3%"><br<br><br>
         	<div class="form-group">
      <form name="registration" method="POST"  onsubmit="registerfirstvalid()"  >
-      <center><img src="user.png"></center>
+      <center><img src="images/user.png"></center>
       <br>
     <label for="name">Name:</label>
     <input type="text" class="form-control tb" id="name" name="name"  ng-model="name" ng-pattern="/^[a-zA-Z][a-zA-Z\\s]+$/" required>
@@ -81,8 +81,8 @@
   }]); 
 </script> 
   
-<script type="text/javascript" src="register.js"></script>
+<script type="text/javascript" src="js/register.js"></script>
 
-<link rel="stylesheet" type="text/css" href="register.css">     
+<link rel="stylesheet" type="text/css" href="css/register.css">     
 </body>
 </html>
