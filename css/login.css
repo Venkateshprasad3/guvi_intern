@@ -1,0 +1,11 @@
+body{
+    background-image: url(back1.jpg);
+}
+h3{
+color: orange; 
+ font-family: 'Times New Roman', Times, serif;
+margin-top: 200px;
+}
+input{
+    width:240px;
+}

@@ -1,0 +1,12 @@
+body{
+    background-image: url(back1.jpg);
+}
+input{
+    width:240px;
+}
+label{
+    color:#5c5c3d;
+}
+header{
+    height:30px;
+}
